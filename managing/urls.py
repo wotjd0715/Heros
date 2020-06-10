@@ -10,3 +10,5 @@ urlpatterns = [
     path('FAQ/detail/<pk>',FAQ_detail,name='FAQ_detail'),
     path('detail/<pk>', Notice_detail, name='Notice_detail')
 ]
+
+#views.py의 기능과 url연결
