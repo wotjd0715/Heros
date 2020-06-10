@@ -1,5 +1,7 @@
+<!-- Main page 에서 로그인 버튼을 눌렀을 때 나오는 page-->
 {% load static %}
 <head>
+<!-- 글꼴 파일 불러오기-->
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <style type="text/css">
     a {
@@ -26,7 +28,7 @@
             <div>
                 <a href="{% url 'main:index' %}" style = " font-size : 5em; color: Green" >Heros</a>
             </div>
-
+            <!-- 로그인 기능 구현-->
             <form method="POST" action="{% url 'accounts:login_view' %}" >
               {%csrf_token%}
               {% if messages %}
@@ -34,6 +36,7 @@
                         {{ message.message }}
                     {% endfor %}
                 {% endif %}
+                <!-- ID -->
                 <div class="form-group" >
                   <table style="width:100%;vertical-align:middle;">
                       <tr style="align-items: center;">
@@ -49,6 +52,7 @@
                       </tr>
                   </table>
                 </div>
+                <!-- Pass Word -->
                 <div class="form-group" >
                   <table style="width:100%">
                       <tr>
@@ -64,10 +68,12 @@
                       </tr>
                   </table>
                 </div>
+                <!-- 로그인 버튼-->
                 <input type="submit" class="save btn btn-success"  value="Log in">
+                <!-- 회원가입 버튼-->
                 <a href="{% url 'accounts:signup_view' %}">
                 <button type="button" class="Sign btn btn-success">Signup</button>
-              </a>
+                </a>
             </form>
 
         </center>
