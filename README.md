@@ -17,4 +17,4 @@ Web_Service / / team_project (Software Engineering)
 ## 서비스 설명
 ![p2p](https://platum.kr/wp-content/uploads/2018/07/P2P_Lending-1440x901-1024x641.jpg)
 - 도움이 필요한 사람과 도움을 주는 사람을 연결해주는 웹 서비스
--
+
