@@ -1,11 +1,13 @@
+<!-- 로그인 전 메인 페이지의 회원가입 클릭 후 나오는 페이지-->
 {% extends 'base.html' %}
 {% block title %}회원가입{% endblock %}
 {% block contents %}
 <div class="container">
     <h1>sign up</h1>
-
+    <!-- 회원 가입 구현-->
     <form method="POST" action="{%url 'accounts:signup_view'%}">
         {% csrf_token %}
+
         {{ signup_form }}
         <br>
         <input type="submit" class="btn btn-primary" value="sign up">
