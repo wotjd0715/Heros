@@ -1,27 +1,27 @@
 from django.shortcuts import render, redirect
 from managing.models import *
 from django.core.paginator import Paginator
-# Create your views here.
+# 공지사항 전체 보기 기능
 def Notice_all(request):
     notice = Notice.objects.all()
     paginator = Paginator(notice, 5)
     page = request.GET.get('page')  # 없으면 1로 지
     posts = paginator.get_page(page)
     return render(request, 'managing/Notice.html', {'notice': notice, 'posts': posts})
-
+#FAQ전체글 보기 기능
 def FAQ_all(request):
     faq = FAQ.objects.all()
     paginator = Paginator(faq, 5)
     page = request.GET.get('page')  # 없으면 1로 지
     posts = paginator.get_page(page)
     return render(request, 'managing/Notice.html', {'faq': faq, 'posts': posts})
-
+#공지사항 세부 내용보기 기능
 def Notice_detail(request, pk):
     notice = Notice.objects.get(pk=pk)
     feed_text=notice.text
     feed_text_list=feed_text.split('\n')
     return render(request, 'managing/Notice_detail.html', {'feed':notice, 'feed_text_list':feed_text_list})
-
+#FAQ 세부 내용보기 기능 
 def FAQ_detail(request, pk):
     faq = FAQ.objects.get(pk=pk)
     feed_text=faq.text

@@ -1,22 +1,14 @@
+<!--공지사항 전체글-->
 {% extends 'base.html' %}
 {% block title %}구해요!{% endblock %}
 {% block contents %}
 
-
+<!--게시글 표시-->
 <div class="container">
-
     <script>i=0</script>
     {% for feed in posts %}
-
     <div class="feed" >
         <table style="width:100%;height:'';"><tr>
-            <td style="width:10%">
-                <script language="JavaScript">
-                i++
-                document.write(i);
-                i++
-                </script>
-            </td>
             <td>
                 <a href="detail/{{ feed.pk }}" class="title">{{ feed.title }}</a>
             </td>

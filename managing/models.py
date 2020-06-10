@@ -9,5 +9,5 @@ class FAQ(models.Model):
     text = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
-
+#FAQ, Notice 틀 설정
 
