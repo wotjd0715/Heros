@@ -1,33 +1,8 @@
 {% extends 'base.html' %}
 {% block title %}구해요!{% endblock %}
 {% block contents %}
-<style type="text/css">
-@charset "utf-8";
-    .menu {
-        text-align:center;
-        height:50px;
-        width:100px;
-      transition: all 0.5s ease;
-      background: white;
-      padding: 10px;
-      font-family: 'Nanum Gothic', sans-serif;
-      font-weight: 600;
-    }
-    .menu:hover{
-       color:#FFFFFF;
-      background: #10A4FF;
-    }
-    .menu-discript{
-      color:#999999;
-      font-weight: lighter;
-      margin:10px 0;
-    }
-    #list_emp td{
-       width:10%;
-    }
 
-</style>
-
+<!-- 카테고리 바 영역 -->
 <div class="container">
 <nav id="bo_cate">
             <ul>
@@ -43,7 +18,7 @@
 </nav>
 </div>
 
-
+<!-- 글 데이터 설명 -->
 <div class="container">
     <table style="width:100%"><tr class="list_emp">
         <td style="width:10%">글 번호</td>
@@ -56,6 +31,7 @@
     </table>
 </div>
 
+<!-- 글 데이터 영역 -->
 <div class="container">
     <script>i=0</script>
     {% for feed in posts %}
@@ -91,6 +67,7 @@
         </tr></table>
     </div>
     {% endfor %}
+    <hr>
 </div>
 <br>
 
@@ -102,24 +79,25 @@
 
     {% if posts.has_previous %}
      <a href="?page=1"> << </a>
-     <a href="?page={{posts.previous_page_number}}"> < </a><a>   </a>
-                  {%else%}
-            <span><<</span><span><</span>
-            {%endif%}
+     <a href="?page={{posts.previous_page_number}}"> < </a>
+     {%else%}
+     <span><<</span><span><</span>
+     {%endif%}
+
      <span>{{posts.number}}</span>
      <span>/</span>
      <span>{{posts.paginator.num_pages}}</span>
+
      {% if posts.has_next %}
      <a href="?page={{posts.next_page_number}}"> > </a>
      <a href="?page={{posts.paginator.num_pages}}"> >> </a>
-            {%else%}
-     <span>></span>  <span>>></span>
+     {%else%}
+     <span>></span><span>>></span>
      {% endif %}
-        </td>
-
-        <td style="width:25%;">
-            <a href="/employer/new" style="float:right"><div class="menu" >글쓰기</div></a>
-        </td>
+     </td>
+     <td style="width:25%;">
+        <a href="/employer/new" style="float:right"><div class="menu" >글쓰기</div></a>
+     </td>
     </tr></table>
 </div>
 
