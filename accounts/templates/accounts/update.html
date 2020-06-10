@@ -1,9 +1,10 @@
+<!-- 로그인후 마이페이지 내부의 회원 정보 수정 버튼 클릭 후 나오는 페이지-->
 {% extends 'base.html' %}
 {% block contents %}
 
 <div class="container">
 <h1>회원 정보 수정</h1>
-
+<!-- 회원 정보 수정 구현-->
 <form method="POST" action="{% url 'accounts:update' %}">
     {% csrf_token %}
 
