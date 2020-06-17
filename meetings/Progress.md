@@ -193,6 +193,8 @@ ScrollTrigger
 ![0606](0606meeting.jpg)
 
 
+
+
 ##6월7일
 
 팀원 4명(윤동준, 이상목, 이진우, 이준병)이 모여서 로그인 실패시
@@ -219,6 +221,10 @@ login창
 그룹 미팅 사진
 
 ![0607](0607meeting.jpg)
+ 
+ 
+ 
+ 
  
  ##6월 10일
  
@@ -272,6 +278,14 @@ login창
  ADMIN FAQ 추가 
  
  ![0610](0610adminfaq.png)
+ 
+ 웹사이트 배포 (knu-heros.kro.kr) pc
+ 
+ ![0610](0610pcversion.jpg)
+ 
+ 모바일
+ 
+ ![0610](0610mobileversion.jpg)
  
  그룹 미팅 사진
  
