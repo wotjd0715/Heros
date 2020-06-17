@@ -14,9 +14,9 @@
     <b>제목</b> &nbsp;&nbsp;{{ feed.title }}
     <hr>
     <table style="width:100%" id="info_table"><tr>
-        <td><b>글쓴이</b>&nbsp;&nbsp; {{ feed.postid }} </td>
-        <td><b>날짜</b>&nbsp;&nbsp; {{ feed.created_at }} </td>
-        <td><b>희망가격</b>{{ feed.price }} </td>
+        <td><b>글쓴이</b>&nbsp;&nbsp;  {{ feed.postid }} </td>
+        <td><b>날짜</b>&nbsp;&nbsp;  {{ feed.created_at }} </td>
+        <td><b>희망가격</b>&nbsp;&nbsp;  {{ feed.price }} </td>
     </tr>
     </table>
     <hr>
@@ -40,8 +40,12 @@
     </td></tr></table>
 </div>
 <br>
+<<<<<<< HEAD
 
 <!--댓글기능-->
+=======
+>>>>>>> 4d2e1ec94387f6e7f4c46e4260d21a3da3bef751
+<div class="container">
 <div id="disqus_thread"></div>
 <script>
 
@@ -62,6 +66,6 @@ s.setAttribute('data-timestamp', +new Date());
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
+</div>
 
 {% endblock %}
