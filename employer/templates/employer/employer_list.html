@@ -53,7 +53,7 @@
                 <a class="place">{{ feed.place }}</a>
             </td>
             <td>
-                <a href="feed/{{ feed.pk }}/" class="title">{{ feed.title }}</a>
+                <a href="./feed/{{ feed.pk }}/" class="title">{{ feed.title }}</a>
             </td>
             <td style="width:10%">
                 <a class="postid">{{ feed.postid }}</a>
@@ -82,7 +82,7 @@
      <a href="?page=1"> << </a>
      <a href="?page={{posts.previous_page_number}}"> < </a>
      {%else%}
-     <span><<</span><span><</span>
+     <span><<</span><span> <</span>
      {%endif%}
 
      <span>{{posts.number}}</span>
