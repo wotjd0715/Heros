@@ -62,13 +62,20 @@
     <div class="feed" >
         <table style="width:100%;height:'';"><tr>
             <td style="width:10%">
+                <script language="JavaScript">
+                i++
+                document.write(i);
+                i++
+                </script>
+            </td>
+            <td style="width:10%">
                 <a class="menuid">{{ feed.menuid }}</a>
             </td>
             <td style="width:10%">
                 <a class="place">{{ feed.place }}</a>
             </td>
             <td>
-                <a href="feed/{{ feed.pk }}/" class="title">{{ feed.title }}</a>
+                <a href="/employee/feed/{{ feed.pk }}/" class="title">{{ feed.title }}</a>
             </td>
             <td style="width:10%">
                 <a class="postid">{{ feed.postid }}</a>
