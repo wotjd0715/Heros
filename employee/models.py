@@ -11,5 +11,8 @@ class Article(models.Model):
     price       = models.CharField(max_length=120,default = '')
     created_at  = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ['-created_at']
+
     def __str__(self):
         return self.menuid
