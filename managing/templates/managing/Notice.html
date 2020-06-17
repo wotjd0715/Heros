@@ -2,9 +2,9 @@
 {% extends 'base.html' %}
 {% block title %}구해요!{% endblock %}
 {% block contents %}
-
 <!--게시글 표시-->
 <div class="container">
+    <b>{{page_title}}</b>
     <script>i=0</script>
     {% for feed in posts %}
     <div class="feed" >
@@ -36,7 +36,7 @@
      <a href="?page=1"> << </a>
      <a href="?page={{posts.previous_page_number}}"> < </a><a>   </a>
                   {%else%}
-            <span><<</span><span><</span>
+            <span><<</span><span> <</span>
             {%endif%}
      <span>{{posts.number}}</span>
      <span>/</span>

@@ -5,6 +5,7 @@
 
 <!--전체글 표시-->
 <div class="container">
+    faq
     <script>i=0</script>
     {% for feed in posts %}
 
@@ -37,7 +38,7 @@
      <a href="?page=1"> << </a>
      <a href="?page={{posts.previous_page_number}}"> < </a><a>   </a>
                   {%else%}
-            <span><<</span><span><</span>
+            <span><<</span><span> <</span>
             {%endif%}
      <span>{{posts.number}}</span>
      <span>/</span>
